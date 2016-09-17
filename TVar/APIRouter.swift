@@ -18,7 +18,7 @@ enum APIRouter: URLRequestConvertible {
     case FacebookLogin([String:String])
     case GetHomeFeed
     case LoadHomeFeed(Int)
-    case GetUploadID([String: AnyObject])
+    case FinishVideo([String: String])
     
     var method: Alamofire.Method {
         switch self{
@@ -28,7 +28,7 @@ enum APIRouter: URLRequestConvertible {
             return .GET
         case .LoadHomeFeed:
             return .GET
-        case .GetUploadID:
+        case .FinishVideo:
             return .POST
         }
     }
@@ -41,7 +41,7 @@ enum APIRouter: URLRequestConvertible {
             return "/videos"
         case .LoadHomeFeed:
             return "/videos"
-        case .GetUploadID:
+        case .FinishVideo:
             return "/videos"
         }
     }
@@ -62,7 +62,7 @@ enum APIRouter: URLRequestConvertible {
             return Alamofire.ParameterEncoding.JSON.encode(mutableURLRequest, parameters: parameters).0
         case .LoadHomeFeed(let page):
             return Alamofire.ParameterEncoding.URL.encode(mutableURLRequest, parameters: ["page": page]).0
-        case .GetUploadID(let params):
+        case .FinishVideo(let params):
             return Alamofire.ParameterEncoding.JSON.encode(mutableURLRequest, parameters: params).0
         default:
             return mutableURLRequest

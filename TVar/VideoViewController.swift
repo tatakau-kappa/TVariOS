@@ -9,7 +9,6 @@
 import UIKit
 import MediaPlayer
 
-
 class VideoViewController: UIViewController {
 
     @IBOutlet weak var commentTable: UITableView!
@@ -21,7 +20,7 @@ class VideoViewController: UIViewController {
     @IBOutlet weak var userImage: CustomImageView!
 
     var video: Video!
-    private var moviePlayer:MPMoviePlayerController!
+    private var moviePlayer: MPMoviePlayerController!
     
     override func viewDidLoad() {
         super.viewDidLoad()

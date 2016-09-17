@@ -14,6 +14,8 @@ class ChoosePhotoViewController: UIViewController, UIImagePickerControllerDelega
     @IBOutlet weak var photoFlag: UIImageView!
     @IBOutlet weak var chooseBox: UIView!
     @IBOutlet weak var selectImage: UIImageView!
+    @IBOutlet weak var deleteButton: UIButton!
+    @IBOutlet weak var doneButton: UIButton!
     
     var selectedImage = ""
     var selectFlag = false
@@ -21,6 +23,10 @@ class ChoosePhotoViewController: UIViewController, UIImagePickerControllerDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(false, animated: false)
+        ManagerLocator.sharedInstance.videoManager.uploadFlag.afterChange.add(owner: self) {
+            value in
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }
         setDesign()
     }
 
@@ -34,16 +40,47 @@ class ChoosePhotoViewController: UIViewController, UIImagePickerControllerDelega
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
-        selectImage.image = image
+        setImage(image)
         self.dismissViewControllerAnimated(true, completion: nil);
     }
     
     // MARK: Logic
+    func setImage(image: UIImage) {
+        selectFlag = true
+        photoFlag.hidden = false
+        chooseBox.hidden = true
+        deleteButton.hidden = false
+        selectImage.hidden = false
+        selectImage.image = image
+        selectImage.layer.cornerRadius = 5
+        doneButton.enabled = true
+        uploadImage(image)
+    }
+    
+    func deleteImage() {
+        photoFlag.hidden = true
+        chooseBox.hidden = false
+        selectImage.hidden = true
+        deleteButton.hidden = true
+        selectImage.image = nil
+        doneButton.enabled = false
+    }
+    
+    func uploadImage(image: UIImage) {
+        let path = NSTemporaryDirectory().stringByAppendingString("image.jpeg")
+        
+        if let data = UIImageJPEGRepresentation(image, 0.8) {
+            data.writeToFile(path, atomically: true)
+        }
+        
+        let url = NSURL(fileURLWithPath: path)
+        ManagerLocator.sharedInstance.videoManager.uploadImage(url)
+
+    }
     
     // MARK: Design
     func setDesign() {
-        photoFlag.hidden = true
-        
+        deleteImage()
         chooseBox.layer.cornerRadius = 5
         videoImage.layer.cornerRadius = 5
         chooseBox.layer.borderWidth = 1.0
@@ -70,4 +107,11 @@ class ChoosePhotoViewController: UIViewController, UIImagePickerControllerDelega
         presentViewController(picker, animated: true, completion: nil)
     }
     
+    @IBAction func deleteButtonPushed(sender: AnyObject) {
+        deleteImage()
+    }
+    
+    @IBAction func doneButtonPushed(sender: AnyObject) {
+        ManagerLocator.sharedInstance.videoManager.finishProcess()
+    }
 }

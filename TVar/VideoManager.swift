@@ -17,6 +17,8 @@ import Photos
 class VideoManager{
     var videoFeed: Observable<[Video]> = Observable([Video]())
     var uploadedVideo: Observable<String> = Observable("")
+    var uploadedImage: Observable<String> = Observable("")
+    var uploadFlag: Observable<Bool> = Observable(false)
     var lastError: NSError?
     
     let transferManager = AWSS3TransferManager.defaultS3TransferManager()
@@ -48,7 +50,6 @@ class VideoManager{
     
     func uploadVideo(url: NSURL){
         let uploadRequest = AWSS3TransferManagerUploadRequest()
-        print(url)
         uploadRequest.bucket = "tatakau-kappa"
         uploadRequest.key = "raw_videos/\(randomString()).mp4"
         uploadRequest.body = url
@@ -63,7 +64,47 @@ class VideoManager{
             }
             return nil
         }
-
+    }
+    
+    func uploadImage(url: NSURL) {
+        let uploadRequest = AWSS3TransferManagerUploadRequest()
+        uploadRequest.bucket = "tatakau-kappa"
+        uploadRequest.key = "raw_images/\(randomString()).jpeg"
+        uploadRequest.body = url
+        uploadRequest.ACL = .PublicRead
+        uploadRequest.contentType = "image/jpeg"
+        transferManager.upload(uploadRequest).continueWithBlock { (task: AWSTask) -> AnyObject? in
+            if task.error == nil && task.exception == nil {
+                self.uploadedImage <- uploadRequest.key!
+                
+            } else {
+                print("fail")
+            }
+            return nil
+        }
+    }
+    
+    func finishProcess() {
+        if uploadedVideo.value != "" && uploadedImage.value != "" {
+            let videoData = ["video_uid": uploadedVideo.value as String,
+                            "image_uid": uploadedImage.value as String,
+                            "program_name": "番組名だよー"]
+            let req = APIRouter.FinishVideo(videoData)
+            Alamofire.request(req).validate().responseObject{
+                (response: Response<User, NSError>) in
+                if response.result.error == nil {
+                    self.uploadedImage <- ""
+                    self.uploadedVideo <- ""
+                    self.uploadFlag <- true
+                } else{
+                    print(response.result.error)
+                    self.lastError = response.result.error
+                }
+            }
+        } else {
+            print(uploadedVideo.value)
+            print(uploadedImage.value)
+        }
     }
     
     func randomString() -> String {
