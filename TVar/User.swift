@@ -26,9 +26,9 @@ public class User:Mappable{
     
     public func mapping(map: Map) {
         id <- map["user_id"]
-        fullName <- map["fullName"]
+        fullName <- map["screen_name"]
         authenticationToken <- map["access_token"]
-        imgUrl <- map["avatarUrl"]
+        imgUrl <- map["image_url"]
         createdAt <- map["createdAt"]
         updatedAt <- map["updatedAt"]
     }

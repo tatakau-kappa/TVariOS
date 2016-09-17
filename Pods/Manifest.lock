@@ -3,6 +3,11 @@ PODS:
   - AlamofireObjectMapper (3.0.2):
     - Alamofire (~> 3.2)
     - ObjectMapper (~> 1.0)
+  - AWSCognito (2.4.7):
+    - AWSCore (= 2.4.7)
+  - AWSCore (2.4.7)
+  - AWSS3 (2.4.7):
+    - AWSCore (= 2.4.7)
   - Bolts (1.8.4):
     - Bolts/AppLinks (= 1.8.4)
     - Bolts/Tasks (= 1.8.4)
@@ -27,6 +32,8 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - AlamofireObjectMapper
+  - AWSCognito (= 2.4.7)
+  - AWSS3 (= 2.4.7)
   - CameraManager (~> 2.2)
   - FBSDKLoginKit
   - HanekeSwift
@@ -38,6 +45,9 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Alamofire: b70a7352335f8ea5babd0a923eb7e8eacc67b877
   AlamofireObjectMapper: 70f97cbf45c01c48d26aa07a1a7059a60ed7411d
+  AWSCognito: 6aa404f15d1eb2b4b51f45322a409257b3248e79
+  AWSCore: 9a729a3c0050a51ece3547d546c327acdac7838a
+  AWSS3: 0f3c8ed11e04cd78cf86ed396c06330ab142db7a
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
   CameraManager: 761f0d3dca325e8dabd46065f0b376798bca66bf
   FBSDKCoreKit: fc7fa53d16b095ee3fd53f0cd59f1df8bcbb634d

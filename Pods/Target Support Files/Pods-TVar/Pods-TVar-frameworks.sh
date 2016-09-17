@@ -84,6 +84,9 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-TVar/AWSCognito.framework"
+  install_framework "Pods-TVar/AWSCore.framework"
+  install_framework "Pods-TVar/AWSS3.framework"
   install_framework "Pods-TVar/Alamofire.framework"
   install_framework "Pods-TVar/AlamofireObjectMapper.framework"
   install_framework "Pods-TVar/Bolts.framework"
@@ -98,6 +101,9 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-TVar/VideoSplash.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-TVar/AWSCognito.framework"
+  install_framework "Pods-TVar/AWSCore.framework"
+  install_framework "Pods-TVar/AWSS3.framework"
   install_framework "Pods-TVar/Alamofire.framework"
   install_framework "Pods-TVar/AlamofireObjectMapper.framework"
   install_framework "Pods-TVar/Bolts.framework"

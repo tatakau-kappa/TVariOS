@@ -13,7 +13,8 @@ target 'TVar' do
   pod 'AlamofireObjectMapper'
   pod 'ObjectMapper'
   pod 'CameraManager', '~> 2.2'
-  
+  pod 'AWSS3', '2.4.7'
+  pod 'AWSCognito', '2.4.7'
 
 end
 

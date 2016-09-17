@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '178415468253F9915733C697'
+               BlueprintIdentifier = 'FA6A37AE61249E250E669368'
                BlueprintName = 'Observable-Swift'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Observable.framework'>

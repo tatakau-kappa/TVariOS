@@ -31,7 +31,6 @@
 		FA9F3AED1D8D13480032FFD4 /* VideoViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA9F3AEB1D8D13480032FFD4 /* VideoViewCell.xib */; };
 		FA9F3AEF1D8D15160032FFD4 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9F3AEE1D8D15160032FFD4 /* VideoViewController.swift */; };
 		FA9F3AF11D8D4C770032FFD4 /* RecordVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9F3AF01D8D4C770032FFD4 /* RecordVideoViewController.swift */; };
-		FA9F3AF31D8D4D930032FFD4 /* CameraManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9F3AF21D8D4D930032FFD4 /* CameraManager.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +58,7 @@
 		FA88C3C81D8D781B004D6E5B /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		FA88C3CA1D8D7DDE004D6E5B /* UniverseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniverseNavigationController.swift; sourceTree = "<group>"; };
 		FA88C3CC1D8D7E42004D6E5B /* SwiftColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftColors.swift; sourceTree = "<group>"; };
+		FA88C3CE1D8DB2D6004D6E5B /* AWSS3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSS3.framework; path = "../../../Library/Developer/Xcode/DerivedData/TVar-cewhewrqvmldaxftbqqjpfuhoznw/Build/Products/Debug-iphoneos/AWSS3.framework"; sourceTree = "<group>"; };
 		FA8BE07C1D8CE8B4006D0F0A /* TVar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA8BE07F1D8CE8B5006D0F0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA8BE0841D8CE8B5006D0F0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -92,7 +92,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA9F3AF31D8D4D930032FFD4 /* CameraManager.framework in Frameworks */,
 				46BCF70F7295D6AB92597E64 /* Pods_TVar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -117,6 +116,7 @@
 		4FF5BE578C525433F1F9E492 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA88C3CE1D8DB2D6004D6E5B /* AWSS3.framework */,
 				FA9F3AF21D8D4D930032FFD4 /* CameraManager.framework */,
 				D6758D3A5EDC989434790F72 /* Pods_TVar.framework */,
 			);

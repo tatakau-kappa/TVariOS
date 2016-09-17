@@ -9,6 +9,7 @@
 import UIKit
 import CameraManager
 import AssetsLibrary
+import Photos
 
 class RecordVideoViewController: UIViewController, UINavigationControllerDelegate {
 
@@ -45,17 +46,24 @@ class RecordVideoViewController: UIViewController, UINavigationControllerDelegat
     
     func sendVideo() {
         cameraManager.stopVideoRecording({ (videoURL, error) -> Void in
-            ALAssetsLibrary().assetForURL(videoURL, resultBlock: {(asset: ALAsset!) -> Void in
-                let rep = asset.defaultRepresentation() as ALAssetRepresentation
-                self.url = rep.url()
-                self.performSegueWithIdentifier("finishRecord", sender: self)
-                let bufferSize = Int(rep.size())
-                let buffer = UnsafeMutablePointer<UInt8>(malloc(bufferSize))
-                let buffered = rep.getBytes(buffer, fromOffset: 0, length: Int(rep.size()), error: nil)
-                var data = NSData(bytesNoCopy: buffer, length: buffered, freeWhenDone: true)
-                print(data)
-//                ManagerLocator.sharedInstance.videoManager.uploadVideo(data)
-                }, failureBlock:nil)
+            self.performSegueWithIdentifier("finishRecord", sender: self)
+            let fetchResult = PHAsset.fetchAssetsWithALAssetURLs([videoURL!], options: nil)
+            if let phAsset = fetchResult.firstObject as? PHAsset {
+                PHImageManager.defaultManager().requestAVAssetForVideo(phAsset, options: PHVideoRequestOptions(), resultHandler: { (asset, audioMix, info) -> Void in
+                    if let asset = asset as? AVURLAsset {
+                        let videoData = NSData(contentsOfURL: asset.URL)
+                        let videoPath = NSTemporaryDirectory() + "tmpMovie.MOV"
+                        let videoSaveURL = NSURL(fileURLWithPath: videoPath)
+                        let writeResult = videoData?.writeToURL(videoSaveURL, atomically: true)
+                        if let writeResult = writeResult where writeResult {
+                            ManagerLocator.sharedInstance.videoManager.uploadVideo(videoSaveURL)
+                        }
+                        else {
+                            print("failure")
+                        }
+                    }
+                })
+            }
         })
     }
     
