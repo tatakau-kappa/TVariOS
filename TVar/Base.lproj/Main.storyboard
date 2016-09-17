@@ -161,10 +161,10 @@
             </objects>
             <point key="canvasLocation" x="2459" y="1096"/>
         </scene>
-        <!--View Controller-->
+        <!--Choose Photo View Controller-->
         <scene sceneID="hxi-5A-AVa">
             <objects>
-                <viewController id="gSy-mc-Sna" sceneMemberID="viewController">
+                <viewController id="gSy-mc-Sna" customClass="ChoosePhotoViewController" customModule="TVar" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Phl-Ba-G3g"/>
                         <viewControllerLayoutGuide type="bottom" id="bpz-ae-3DD"/>
@@ -172,6 +172,12 @@
                     <view key="view" contentMode="scaleToFill" id="ATM-md-ENV">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bl6-Sb-TGe">
+                                <rect key="frame" x="0.0" y="64" width="397" height="211"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>

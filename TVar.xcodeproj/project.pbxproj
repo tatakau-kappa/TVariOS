@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		46BCF70F7295D6AB92597E64 /* Pods_TVar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6758D3A5EDC989434790F72 /* Pods_TVar.framework */; };
+		FA88C3C71D8D5C12004D6E5B /* ChoosePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA88C3C61D8D5C12004D6E5B /* ChoosePhotoViewController.swift */; };
 		FA8BE0801D8CE8B5006D0F0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8BE07F1D8CE8B5006D0F0A /* AppDelegate.swift */; };
 		FA8BE0851D8CE8B5006D0F0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA8BE0831D8CE8B5006D0F0A /* Main.storyboard */; };
 		FA8BE0871D8CE8B5006D0F0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA8BE0861D8CE8B5006D0F0A /* Assets.xcassets */; };
@@ -51,6 +52,7 @@
 		23CC6238A2E7CE4BF4C45270 /* Pods-TVar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVar.release.xcconfig"; path = "Pods/Target Support Files/Pods-TVar/Pods-TVar.release.xcconfig"; sourceTree = "<group>"; };
 		A3183CF56BA295E94A22BDEF /* Pods-TVar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TVar/Pods-TVar.debug.xcconfig"; sourceTree = "<group>"; };
 		D6758D3A5EDC989434790F72 /* Pods_TVar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TVar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA88C3C61D8D5C12004D6E5B /* ChoosePhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoosePhotoViewController.swift; sourceTree = "<group>"; };
 		FA8BE07C1D8CE8B4006D0F0A /* TVar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA8BE07F1D8CE8B5006D0F0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA8BE0841D8CE8B5006D0F0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 				FA9F3AE71D8D05DE0032FFD4 /* HomeFeedViewController.swift */,
 				FA9F3AEE1D8D15160032FFD4 /* VideoViewController.swift */,
 				FA9F3AF01D8D4C770032FFD4 /* RecordVideoViewController.swift */,
+				FA88C3C61D8D5C12004D6E5B /* ChoosePhotoViewController.swift */,
 				FA9F3AE91D8D132B0032FFD4 /* Cell */,
 			);
 			name = ViewController;
@@ -424,6 +427,7 @@
 				FA8BE0801D8CE8B5006D0F0A /* AppDelegate.swift in Sources */,
 				FA9F3AD41D8CFDEF0032FFD4 /* User.swift in Sources */,
 				FA9F3AD91D8CFE690032FFD4 /* ManagerLocator.swift in Sources */,
+				FA88C3C71D8D5C12004D6E5B /* ChoosePhotoViewController.swift in Sources */,
 				FA9F3AE81D8D05DE0032FFD4 /* HomeFeedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

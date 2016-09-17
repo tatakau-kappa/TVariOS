@@ -8,6 +8,7 @@
 
 import UIKit
 import CameraManager
+import AssetsLibrary
 
 class RecordVideoViewController: UIViewController, UINavigationControllerDelegate {
 
@@ -40,6 +41,24 @@ class RecordVideoViewController: UIViewController, UINavigationControllerDelegat
         cameraManager.addPreviewLayerToView(self.wholeView)
     }
     
+    // MARK: Send Video
+    
+    func sendVideo() {
+        cameraManager.stopVideoRecording({ (videoURL, error) -> Void in
+            ALAssetsLibrary().assetForURL(videoURL, resultBlock: {(asset: ALAsset!) -> Void in
+                let rep = asset.defaultRepresentation() as ALAssetRepresentation
+                self.url = rep.url()
+                self.performSegueWithIdentifier("finishRecord", sender: self)
+                let bufferSize = Int(rep.size())
+                let buffer = UnsafeMutablePointer<UInt8>(malloc(bufferSize))
+                let buffered = rep.getBytes(buffer, fromOffset: 0, length: Int(rep.size()), error: nil)
+                var data = NSData(bytesNoCopy: buffer, length: buffered, freeWhenDone: true)
+                print(data)
+//                ManagerLocator.sharedInstance.videoManager.uploadVideo(data)
+                }, failureBlock:nil)
+        })
+    }
+    
     // MARK:Transition
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "finishRecord"{
@@ -61,8 +80,7 @@ class RecordVideoViewController: UIViewController, UINavigationControllerDelegat
             let image = UIImage(named: "btn_record_on")
             recordButton.setImage(image, forState: .Normal)
         } else {
-//            sendVideo()
-            dismissViewControllerAnimated(true, completion: nil)
+            sendVideo()
         }
     }
     
