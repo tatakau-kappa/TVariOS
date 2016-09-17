@@ -15,6 +15,13 @@
 		FA8BE0951D8CE8B5006D0F0A /* TVarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8BE0941D8CE8B5006D0F0A /* TVarTests.swift */; };
 		FA8BE0A01D8CE8B5006D0F0A /* TVarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8BE09F1D8CE8B5006D0F0A /* TVarUITests.swift */; };
 		FA9F3AD21D8CE9CA0032FFD4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9F3AD11D8CE9CA0032FFD4 /* LoginViewController.swift */; };
+		FA9F3AD41D8CFDEF0032FFD4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9F3AD31D8CFDEF0032FFD4 /* User.swift */; };
+		FA9F3AD61D8CFE150032FFD4 /* Viedo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9F3AD51D8CFE150032FFD4 /* Viedo.swift */; };
+		FA9F3AD91D8CFE690032FFD4 /* ManagerLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9F3AD81D8CFE690032FFD4 /* ManagerLocator.swift */; };
+		FA9F3ADB1D8CFE810032FFD4 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9F3ADA1D8CFE810032FFD4 /* UserManager.swift */; };
+		FA9F3ADD1D8D01A20032FFD4 /* VideoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9F3ADC1D8D01A20032FFD4 /* VideoManager.swift */; };
+		FA9F3AE21D8D039C0032FFD4 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9F3AE11D8D039C0032FFD4 /* CustomImageView.swift */; };
+		FA9F3AE41D8D03C50032FFD4 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9F3AE31D8D03C50032FFD4 /* APIRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +58,13 @@
 		FA8BE09F1D8CE8B5006D0F0A /* TVarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVarUITests.swift; sourceTree = "<group>"; };
 		FA8BE0A11D8CE8B5006D0F0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA9F3AD11D8CE9CA0032FFD4 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FA9F3AD31D8CFDEF0032FFD4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FA9F3AD51D8CFE150032FFD4 /* Viedo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Viedo.swift; sourceTree = "<group>"; };
+		FA9F3AD81D8CFE690032FFD4 /* ManagerLocator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerLocator.swift; sourceTree = "<group>"; };
+		FA9F3ADA1D8CFE810032FFD4 /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		FA9F3ADC1D8D01A20032FFD4 /* VideoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoManager.swift; sourceTree = "<group>"; };
+		FA9F3AE11D8D039C0032FFD4 /* CustomImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
+		FA9F3AE31D8D03C50032FFD4 /* APIRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +140,8 @@
 				FA8BE0861D8CE8B5006D0F0A /* Assets.xcassets */,
 				FA8BE0881D8CE8B5006D0F0A /* LaunchScreen.storyboard */,
 				FA8BE08B1D8CE8B5006D0F0A /* Info.plist */,
+				FA9F3ADE1D8D033D0032FFD4 /* Util */,
+				FA9F3AD71D8CFE530032FFD4 /* Manager */,
 				FA9F3AD01D8CE9B00032FFD4 /* ViewController */,
 				FA9F3ACF1D8CE9A60032FFD4 /* Model */,
 			);
@@ -153,6 +169,8 @@
 		FA9F3ACF1D8CE9A60032FFD4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FA9F3AD31D8CFDEF0032FFD4 /* User.swift */,
+				FA9F3AD51D8CFE150032FFD4 /* Viedo.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -163,6 +181,25 @@
 				FA9F3AD11D8CE9CA0032FFD4 /* LoginViewController.swift */,
 			);
 			name = ViewController;
+			sourceTree = "<group>";
+		};
+		FA9F3AD71D8CFE530032FFD4 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				FA9F3AD81D8CFE690032FFD4 /* ManagerLocator.swift */,
+				FA9F3ADA1D8CFE810032FFD4 /* UserManager.swift */,
+				FA9F3ADC1D8D01A20032FFD4 /* VideoManager.swift */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
+		FA9F3ADE1D8D033D0032FFD4 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				FA9F3AE11D8D039C0032FFD4 /* CustomImageView.swift */,
+				FA9F3AE31D8D03C50032FFD4 /* APIRouter.swift */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,8 +384,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA9F3ADB1D8CFE810032FFD4 /* UserManager.swift in Sources */,
+				FA9F3AE41D8D03C50032FFD4 /* APIRouter.swift in Sources */,
+				FA9F3AE21D8D039C0032FFD4 /* CustomImageView.swift in Sources */,
 				FA9F3AD21D8CE9CA0032FFD4 /* LoginViewController.swift in Sources */,
+				FA9F3AD61D8CFE150032FFD4 /* Viedo.swift in Sources */,
+				FA9F3ADD1D8D01A20032FFD4 /* VideoManager.swift in Sources */,
 				FA8BE0801D8CE8B5006D0F0A /* AppDelegate.swift in Sources */,
+				FA9F3AD41D8CFDEF0032FFD4 /* User.swift in Sources */,
+				FA9F3AD91D8CFE690032FFD4 /* ManagerLocator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

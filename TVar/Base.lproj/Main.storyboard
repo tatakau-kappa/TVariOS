@@ -24,17 +24,26 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vRx-Rl-Sn6">
+                                <rect key="frame" x="256" y="285" width="88" height="30"/>
+                                <state key="normal" title="Mock Button"/>
+                                <connections>
+                                    <action selector="mockButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zBD-CZ-inZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="us7-Lu-96A" secondAttribute="trailing" constant="20" id="Fqo-Pp-r4G"/>
+                            <constraint firstItem="vRx-Rl-Sn6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="IRF-K2-gdr"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="us7-Lu-96A" secondAttribute="bottom" constant="80" id="MQg-XM-lve"/>
+                            <constraint firstItem="vRx-Rl-Sn6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Oeo-IB-PgC"/>
                             <constraint firstItem="us7-Lu-96A" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="bnM-LL-7aX"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="fbLoginButton" destination="us7-Lu-96A" id="aUK-aI-CDC"/>
-                        <segue destination="IqN-kL-V2N" kind="show" identifier="loginSucceeded" id="Bqs-i6-E1n"/>
+                        <segue destination="Xsg-CD-krR" kind="show" identifier="loginSucceeded" id="Bqs-i6-E1n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -52,10 +61,29 @@
                     <view key="view" contentMode="scaleToFill" id="dAI-R6-KHa">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.83137254900000002" blue="0.52549019610000003" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="cCC-r6-iXC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LeC-UK-AMj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1647" y="335"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9Db-n7-m00">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xsg-CD-krR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hgg-la-ZEO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="IqN-kL-V2N" kind="relationship" relationship="rootViewController" id="7Qf-4E-6m4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dR2-bs-V88" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="835" y="335"/>
         </scene>

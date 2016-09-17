@@ -38,6 +38,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate  {
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(0.8 * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), { () -> Void in
                 self.performSegueWithIdentifier("loginSucceeded", sender: self)
             })
+
         } else {
             // TODO: 失敗のモーダル表示
             print(error.localizedDescription)
@@ -47,5 +48,11 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate  {
     func loginButtonDidLogOut(loginButton: FBSDKLoginButton!){
         print("User logged out...")
     }
+    
+    @IBAction func mockButton(sender: AnyObject) {
+        ManagerLocator.sharedInstance.userManager.loginMock()
+        self.performSegueWithIdentifier("loginSucceeded", sender: self)
+    }
+    
 
 }
