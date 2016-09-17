@@ -17,8 +17,8 @@ public class Video:Mappable{
     public dynamic var videoUrl = "https://d2nfxe3r64iwve.cloudfront.net/test/battlehack-video.mp4"
     public var author = User()
     dynamic var commentsCount = 90
-//    dynamic var commented = false
-//    dynamic var comments = [Comment]()
+    dynamic var viewCount = 1000
+    var comments = [Comment]()
     public dynamic var createdAt = ""
     public dynamic var updatedAt = ""
     
@@ -31,11 +31,11 @@ public class Video:Mappable{
     public func mapping(map: Map) {
         id <- map["id"]
         author <- map["user"]
-        imgUrl <- map["imgUrl"]
-        videoUrl <- map["videoUrl"]
+        imgUrl <- map["resource.thumbnail"]
+        videoUrl <- map["resource.swapped"]
         commentsCount <- map["commentsCount"]
-//        commented <- map["commented"]
-//        comments <- map["comments"]
+        viewCount <- map["view_count"]
+        comments <- map["video_comments"]
         createdAt <- map["createdAt"]
         updatedAt <- map["updatedAt"]
     }

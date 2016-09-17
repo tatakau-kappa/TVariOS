@@ -45,7 +45,6 @@ class UserManager{
         print(user)
         self.currentUser <- user
         APIRouter.token = self.currentUser.value!.authenticationToken
-        print(APIRouter.token)
     }
     
     
@@ -54,8 +53,7 @@ class UserManager{
         if let json = NSUserDefaults.standardUserDefaults().stringForKey("loginUser"){
             if let user = Mapper<User>().map(json){
                 currentUser <- user
-//                APIRouter.token = currentUser.value!.authenticationToken
-//                VideoRouter.token = currentUser.value!.authenticationToken
+                APIRouter.token = currentUser.value!.authenticationToken
                 return true
             } else {
                 return false

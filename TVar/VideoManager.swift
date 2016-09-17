@@ -29,16 +29,16 @@ class VideoManager{
     }
     
     func loadFeed(page: Int){
-//        let req  = APIRouter.GetHomeFeed
-//        
-//        Alamofire.request(req).validate().responseArray{
-//            (response: Response<[Video], NSError>) in
-//            if response.result.error == nil {
-//                self.videoFeed <- response.result.value!
-//            } else{
-//                self.lastError = response.result.error
-//            }
-//        }
+        let req  = APIRouter.GetHomeFeed
+        
+        Alamofire.request(req).validate().responseArray{
+            (response: Response<[Video], NSError>) in
+            if response.result.error == nil {
+                self.videoFeed <- response.result.value!
+            } else{
+                self.lastError = response.result.error
+            }
+        }
     }
 //
 //    func uploadVideo(data: NSData, id: Int){
