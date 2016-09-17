@@ -17,7 +17,18 @@ class VideoManager{
     var inputVideos = [PHAsset]()
     var lastError: NSError?
     
-//    func loadFeed(){
+    func loadMockFeed(page: Int){
+        dispatch_async(dispatch_get_main_queue(),{
+            let video = Video()
+            var tempFeed = [Video]()
+            for _ in 0..<5{
+                tempFeed.append(video)
+            }
+            self.videoFeed <- tempFeed
+        })
+    }
+    
+    func loadFeed(page: Int){
 //        let req  = APIRouter.GetHomeFeed
 //        
 //        Alamofire.request(req).validate().responseArray{
@@ -28,8 +39,8 @@ class VideoManager{
 //                self.lastError = response.result.error
 //            }
 //        }
-//    }
-//    
+    }
+//
 //    func uploadVideo(data: NSData, id: Int){
 //        //        let params = ["id": id.description]
 //        //        let req = VideoRouter.Upload(id)

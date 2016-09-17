@@ -50,10 +50,10 @@
             </objects>
             <point key="canvasLocation" x="146" y="335"/>
         </scene>
-        <!--View Controller-->
+        <!--Home Feed View Controller-->
         <scene sceneID="Jfx-hs-YS0">
             <objects>
-                <viewController id="IqN-kL-V2N" sceneMemberID="viewController">
+                <viewController id="IqN-kL-V2N" customClass="HomeFeedViewController" customModule="TVar" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LsT-rU-oDE"/>
                         <viewControllerLayoutGuide type="bottom" id="be9-xC-jfy"/>
@@ -61,13 +61,46 @@
                     <view key="view" contentMode="scaleToFill" id="dAI-R6-KHa">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.83137254900000002" blue="0.52549019610000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Mvk-7i-XC0">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Mvk-7i-XC0" firstAttribute="top" secondItem="dAI-R6-KHa" secondAttribute="top" id="29A-35-McT"/>
+                            <constraint firstItem="be9-xC-jfy" firstAttribute="top" secondItem="Mvk-7i-XC0" secondAttribute="bottom" id="2zS-xj-UKj"/>
+                            <constraint firstAttribute="trailing" secondItem="Mvk-7i-XC0" secondAttribute="trailing" id="tNd-lQ-zXK"/>
+                            <constraint firstItem="Mvk-7i-XC0" firstAttribute="leading" secondItem="dAI-R6-KHa" secondAttribute="leading" id="uwZ-YV-8XA"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cCC-r6-iXC"/>
+                    <connections>
+                        <outlet property="videoTable" destination="Mvk-7i-XC0" id="DM3-Po-t73"/>
+                        <segue destination="m5B-XG-BBO" kind="show" identifier="selectVideo" id="B7G-B0-N39"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LeC-UK-AMj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1647" y="335"/>
+        </scene>
+        <!--Video View Controller-->
+        <scene sceneID="SP9-Es-amt">
+            <objects>
+                <viewController id="m5B-XG-BBO" customClass="VideoViewController" customModule="TVar" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="M9I-2p-DfR"/>
+                        <viewControllerLayoutGuide type="bottom" id="jTr-xC-cfN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CxD-Dq-GSX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.83137254900000002" blue="0.52549019610000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vky-Qv-skQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2307" y="336"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9Db-n7-m00">
