@@ -56,8 +56,8 @@ class HomeFeedViewController: UIViewController, UITableViewDelegate, UITableView
     
     // MARK: Data Logic
     func loadFeed(){
-//        ManagerLocator.sharedInstance.videoManager.loadMockFeed(page)
-        ManagerLocator.sharedInstance.videoManager.loadFeed(page)
+        ManagerLocator.sharedInstance.videoManager.loadMockFeed(page)
+//        ManagerLocator.sharedInstance.videoManager.loadFeed(page)
     }
     
     func pullToRefresh(){

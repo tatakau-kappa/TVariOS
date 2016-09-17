@@ -12,9 +12,9 @@ class UniverseNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationBar.barTintColor = UIColor(hexString: "#ffffff")
-        self.navigationBar.tintColor = UIColor(hexString: "##4F595E")
-        self.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor(hexString: "#4F595E")!]
+        self.navigationBar.barTintColor = UIColor(hexString: "#2979FF")
+        self.navigationBar.tintColor = UIColor(hexString: "#FFFFFF")
+        self.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor(hexString: "#FFFFFF")!]
     }
 
     override func didReceiveMemoryWarning() {
