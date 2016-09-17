@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46BCF70F7295D6AB92597E64 /* Pods_TVar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6758D3A5EDC989434790F72 /* Pods_TVar.framework */; };
 		FA8BE0801D8CE8B5006D0F0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8BE07F1D8CE8B5006D0F0A /* AppDelegate.swift */; };
-		FA8BE0821D8CE8B5006D0F0A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8BE0811D8CE8B5006D0F0A /* ViewController.swift */; };
 		FA8BE0851D8CE8B5006D0F0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA8BE0831D8CE8B5006D0F0A /* Main.storyboard */; };
 		FA8BE0871D8CE8B5006D0F0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA8BE0861D8CE8B5006D0F0A /* Assets.xcassets */; };
 		FA8BE08A1D8CE8B5006D0F0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA8BE0881D8CE8B5006D0F0A /* LaunchScreen.storyboard */; };
 		FA8BE0951D8CE8B5006D0F0A /* TVarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8BE0941D8CE8B5006D0F0A /* TVarTests.swift */; };
 		FA8BE0A01D8CE8B5006D0F0A /* TVarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8BE09F1D8CE8B5006D0F0A /* TVarUITests.swift */; };
+		FA9F3AD21D8CE9CA0032FFD4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9F3AD11D8CE9CA0032FFD4 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +35,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		23CC6238A2E7CE4BF4C45270 /* Pods-TVar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVar.release.xcconfig"; path = "Pods/Target Support Files/Pods-TVar/Pods-TVar.release.xcconfig"; sourceTree = "<group>"; };
+		A3183CF56BA295E94A22BDEF /* Pods-TVar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TVar/Pods-TVar.debug.xcconfig"; sourceTree = "<group>"; };
+		D6758D3A5EDC989434790F72 /* Pods_TVar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TVar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA8BE07C1D8CE8B4006D0F0A /* TVar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA8BE07F1D8CE8B5006D0F0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FA8BE0811D8CE8B5006D0F0A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FA8BE0841D8CE8B5006D0F0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA8BE0861D8CE8B5006D0F0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA8BE0891D8CE8B5006D0F0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +50,7 @@
 		FA8BE09B1D8CE8B5006D0F0A /* TVarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TVarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA8BE09F1D8CE8B5006D0F0A /* TVarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVarUITests.swift; sourceTree = "<group>"; };
 		FA8BE0A11D8CE8B5006D0F0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA9F3AD11D8CE9CA0032FFD4 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46BCF70F7295D6AB92597E64 /* Pods_TVar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +79,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4FF5BE578C525433F1F9E492 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D6758D3A5EDC989434790F72 /* Pods_TVar.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5F891C5842ABE1C024AE196B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A3183CF56BA295E94A22BDEF /* Pods-TVar.debug.xcconfig */,
+				23CC6238A2E7CE4BF4C45270 /* Pods-TVar.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		FA8BE0731D8CE8B4006D0F0A = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +103,8 @@
 				FA8BE0931D8CE8B5006D0F0A /* TVarTests */,
 				FA8BE09E1D8CE8B5006D0F0A /* TVarUITests */,
 				FA8BE07D1D8CE8B4006D0F0A /* Products */,
+				5F891C5842ABE1C024AE196B /* Pods */,
+				4FF5BE578C525433F1F9E492 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,11 +122,12 @@
 			isa = PBXGroup;
 			children = (
 				FA8BE07F1D8CE8B5006D0F0A /* AppDelegate.swift */,
-				FA8BE0811D8CE8B5006D0F0A /* ViewController.swift */,
 				FA8BE0831D8CE8B5006D0F0A /* Main.storyboard */,
 				FA8BE0861D8CE8B5006D0F0A /* Assets.xcassets */,
 				FA8BE0881D8CE8B5006D0F0A /* LaunchScreen.storyboard */,
 				FA8BE08B1D8CE8B5006D0F0A /* Info.plist */,
+				FA9F3AD01D8CE9B00032FFD4 /* ViewController */,
+				FA9F3ACF1D8CE9A60032FFD4 /* Model */,
 			);
 			path = TVar;
 			sourceTree = "<group>";
@@ -125,6 +150,21 @@
 			path = TVarUITests;
 			sourceTree = "<group>";
 		};
+		FA9F3ACF1D8CE9A60032FFD4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		FA9F3AD01D8CE9B00032FFD4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FA9F3AD11D8CE9CA0032FFD4 /* LoginViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA8BE0A41D8CE8B5006D0F0A /* Build configuration list for PBXNativeTarget "TVar" */;
 			buildPhases = (
+				B0A5BEDCFAFB4E1FA7878559 /* Check Pods Manifest.lock */,
 				FA8BE0781D8CE8B4006D0F0A /* Sources */,
 				FA8BE0791D8CE8B4006D0F0A /* Frameworks */,
 				FA8BE07A1D8CE8B4006D0F0A /* Resources */,
+				4140FA7054F23369CCFA8D18 /* Embed Pods Frameworks */,
+				56E144D75554F799218A3587 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -251,12 +294,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4140FA7054F23369CCFA8D18 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TVar/Pods-TVar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		56E144D75554F799218A3587 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TVar/Pods-TVar-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B0A5BEDCFAFB4E1FA7878559 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FA8BE0781D8CE8B4006D0F0A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA8BE0821D8CE8B5006D0F0A /* ViewController.swift in Sources */,
+				FA9F3AD21D8CE9CA0032FFD4 /* LoginViewController.swift in Sources */,
 				FA8BE0801D8CE8B5006D0F0A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,6 +490,7 @@
 		};
 		FA8BE0A51D8CE8B5006D0F0A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3183CF56BA295E94A22BDEF /* Pods-TVar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TVar/Info.plist;
@@ -410,6 +502,7 @@
 		};
 		FA8BE0A61D8CE8B5006D0F0A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23CC6238A2E7CE4BF4C45270 /* Pods-TVar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TVar/Info.plist;
@@ -484,6 +577,7 @@
 				FA8BE0A61D8CE8B5006D0F0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA8BE0A71D8CE8B5006D0F0A /* Build configuration list for PBXNativeTarget "TVarTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +586,7 @@
 				FA8BE0A91D8CE8B5006D0F0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA8BE0AA1D8CE8B5006D0F0A /* Build configuration list for PBXNativeTarget "TVarUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +595,7 @@
 				FA8BE0AC1D8CE8B5006D0F0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

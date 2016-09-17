@@ -1,0 +1,44 @@
+PODS:
+  - Alamofire (3.5.0)
+  - AlamofireObjectMapper (3.0.2):
+    - Alamofire (~> 3.2)
+    - ObjectMapper (~> 1.0)
+  - Bolts (1.8.4):
+    - Bolts/AppLinks (= 1.8.4)
+    - Bolts/Tasks (= 1.8.4)
+  - Bolts/AppLinks (1.8.4):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.8.4)
+  - CollectionViewWaterfallLayout (0.2.2)
+  - FBSDKCoreKit (4.15.1):
+    - Bolts (~> 1.7)
+  - FBSDKLoginKit (4.15.1):
+    - FBSDKCoreKit
+  - HanekeSwift (0.10.1)
+  - ObjectMapper (1.4.0)
+  - Observable-Swift (0.6.0)
+  - VideoSplash (1.0.9)
+
+DEPENDENCIES:
+  - Alamofire
+  - AlamofireObjectMapper
+  - CollectionViewWaterfallLayout
+  - FBSDKLoginKit
+  - HanekeSwift
+  - ObjectMapper
+  - Observable-Swift
+  - VideoSplash
+
+SPEC CHECKSUMS:
+  Alamofire: b70a7352335f8ea5babd0a923eb7e8eacc67b877
+  AlamofireObjectMapper: 70f97cbf45c01c48d26aa07a1a7059a60ed7411d
+  Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  CollectionViewWaterfallLayout: b4f9aabad89609696ea3f6dceff956dd58e2bae4
+  FBSDKCoreKit: fc7fa53d16b095ee3fd53f0cd59f1df8bcbb634d
+  FBSDKLoginKit: 073f79b3b2e762fc6f54a283fe15f45372d59f5f
+  HanekeSwift: 08e47d3d0f2899ec58e5d257beba0de619aca9e8
+  ObjectMapper: a07ad0462c5adf014adc0f89ef04c29b626e855e
+  Observable-Swift: c63b9fc990703b135450cb5bd3541022384867ae
+  VideoSplash: b862d41726b22fefd47ffe845c0524616cf5ab0e
+
+COCOAPODS: 0.39.0
