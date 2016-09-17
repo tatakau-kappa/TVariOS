@@ -9,7 +9,7 @@ target 'TVar' do
   pod 'HanekeSwift'
   pod 'VideoSplash'
   pod 'Observable-Swift'
-
+  pod 'RealmSwift'
   pod 'Alamofire'
   pod 'AlamofireObjectMapper'
   pod 'ObjectMapper'

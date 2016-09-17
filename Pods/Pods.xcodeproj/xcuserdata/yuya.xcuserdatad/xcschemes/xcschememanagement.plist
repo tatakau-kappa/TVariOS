@@ -54,6 +54,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Realm.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RealmSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>VideoSplash.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -62,7 +72,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>050333268C8EBD7971172E2CBDFB745E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>0595B31B82B439258B90E4507BAD6C83</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2064DEC6A53E81DEE63D3D6BB497698B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -82,6 +102,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>629C18E145D542439FA1188AB7E59D2E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
 		<dict>
 			<key>primary</key>
@@ -92,17 +117,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>89DAC6DFF1B61A8EEB5C737C264BAC0F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>9D0F2E5EA1B46A5D72FFD42B0B39DBBC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C11DADE712FC73933A7D357F44445A3A</key>
+		<key>C0AC860679ED30A27760533BA0849843</key>
 		<dict>
 			<key>primary</key>
 			<true/>

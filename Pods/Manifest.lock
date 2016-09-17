@@ -17,6 +17,11 @@ PODS:
   - HanekeSwift (0.10.1)
   - ObjectMapper (1.4.0)
   - Observable-Swift (0.6.0)
+  - Realm (1.1.0):
+    - Realm/Headers (= 1.1.0)
+  - Realm/Headers (1.1.0)
+  - RealmSwift (1.1.0):
+    - Realm (= 1.1.0)
   - VideoSplash (1.0.9)
 
 DEPENDENCIES:
@@ -27,6 +32,7 @@ DEPENDENCIES:
   - HanekeSwift
   - ObjectMapper
   - Observable-Swift
+  - RealmSwift
   - VideoSplash
 
 SPEC CHECKSUMS:
@@ -39,6 +45,8 @@ SPEC CHECKSUMS:
   HanekeSwift: 08e47d3d0f2899ec58e5d257beba0de619aca9e8
   ObjectMapper: a07ad0462c5adf014adc0f89ef04c29b626e855e
   Observable-Swift: c63b9fc990703b135450cb5bd3541022384867ae
+  Realm: ceecf1a4540c4ce9efe196fe73fa9855bce05bd8
+  RealmSwift: 838058b2db95b12cb86bd0cf209df642c33fb60a
   VideoSplash: b862d41726b22fefd47ffe845c0524616cf5ab0e
 
 COCOAPODS: 0.39.0

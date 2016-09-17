@@ -93,6 +93,8 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-TVar/Haneke.framework"
   install_framework "Pods-TVar/ObjectMapper.framework"
   install_framework "Pods-TVar/Observable.framework"
+  install_framework "Pods-TVar/Realm.framework"
+  install_framework "Pods-TVar/RealmSwift.framework"
   install_framework "Pods-TVar/VideoSplash.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -105,5 +107,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-TVar/Haneke.framework"
   install_framework "Pods-TVar/ObjectMapper.framework"
   install_framework "Pods-TVar/Observable.framework"
+  install_framework "Pods-TVar/Realm.framework"
+  install_framework "Pods-TVar/RealmSwift.framework"
   install_framework "Pods-TVar/VideoSplash.framework"
 fi

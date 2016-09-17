@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'BFD224830C6599AB4E3EFD2F'
+               BlueprintIdentifier = '4C5078B5699811D5CC9194BA'
                BlueprintName = 'Pods-TVar'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_TVar.framework'>

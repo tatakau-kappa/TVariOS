@@ -7,15 +7,14 @@
 //
 
 import Foundation
-
-
+import RealmSwift
 import ObjectMapper
 
-public class User: Mappable{
+public class User:Mappable{
     dynamic var id = 0
     public dynamic var fullName = "Tanaka Yohachi"
     public dynamic var authenticationToken = ""
-    public dynamic var imgUrl = "http://images.claudetech.com/convert?quality=100&source=http%3A%2F%2Fwww.gizmodo.jp%2Fimages%2F2015%2F05%2F150325orangepeeler.jpg"
+    public dynamic var imgUrl = "https://graph.facebook.com/100000686899395/picture?type=square"
     public dynamic var createdAt = ""
     public dynamic var updatedAt = ""
     

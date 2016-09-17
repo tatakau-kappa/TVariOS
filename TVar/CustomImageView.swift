@@ -15,6 +15,8 @@ class CustomImageView: UIImageView {
         if let ImageURL = url{
             dispatch_async(dispatch_get_main_queue(),{
                 self.hnk_setImageFromURL(NSURL(string: ImageURL)!, placeholder: nil,  success: nil,  failure: {(NSError) in
+                    print("error")
+                    print(NSError)
                     self.image = nil
                 })
             })

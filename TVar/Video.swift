@@ -7,13 +7,18 @@
 //
 
 import Foundation
-
+import RealmSwift
 import ObjectMapper
 
-public class Video:  Mappable{
+public class Video:Mappable{
     dynamic var id = ""
-    public dynamic var imgUrl = "https://www.google.co.jp/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjJs-_72JXPAhXBE5QKHarRC7kQjRwIBA&url=http%3A%2F%2Fswitch-box.net%2Fwallpaper-tiger-illustration.html&psig=AFQjCNHXLaB6X18zJRJRi6BajkuteCBRLg&ust=1474177417894068"
+    public dynamic var title = "素敵な番組"
+    public dynamic var imgUrl = "https://prog-8.com/assets/landing/firstview-4877280ff41348d0481c044493e01c54.png"
     public dynamic var videoUrl = "https://l.facebook.com/l.php?u=https%3A%2F%2Fd2nfxe3r64iwve.cloudfront.net%2Ftest%2Fbattlehack-video.mp4&h=wAQFDr85b"
+    public var author = User()
+    dynamic var commentsCount = 90
+//    dynamic var commented = false
+//    dynamic var comments = [Comment]()
     public dynamic var createdAt = ""
     public dynamic var updatedAt = ""
     
@@ -25,8 +30,12 @@ public class Video:  Mappable{
     
     public func mapping(map: Map) {
         id <- map["id"]
+        author <- map["user"]
         imgUrl <- map["imgUrl"]
         videoUrl <- map["videoUrl"]
+        commentsCount <- map["commentsCount"]
+//        commented <- map["commented"]
+//        comments <- map["comments"]
         createdAt <- map["createdAt"]
         updatedAt <- map["updatedAt"]
     }
