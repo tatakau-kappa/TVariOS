@@ -100,7 +100,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4By-ym-uqZ" userLabel="container">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PMS-Rc-SVv">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PMS-Rc-SVv" userLabel="CommentTable">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <view key="tableFooterView" contentMode="scaleToFill" id="kj6-al-j8C" userLabel="Header">
@@ -110,7 +110,7 @@
                                                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dfK-4F-pGU" userLabel="Video">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="240"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mak-HX-9Pu" customClass="CusomImageView" customModule="TVar" customModuleProvider="target">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mak-HX-9Pu" customClass="CustomImageView" customModule="TVar" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="0.0" width="600" height="240"/>
                                                             <color key="backgroundColor" red="0.078431372549019607" green="0.10588235294117647" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
                                                         </imageView>
@@ -135,7 +135,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5c9-Gs-ADe" userLabel="Description">
                                                     <rect key="frame" x="0.0" y="240" width="600" height="80"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IyY-AO-XbF" customClass="CusomImageView" customModule="TVar" customModuleProvider="target">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IyY-AO-XbF" customClass="CustomImageView" customModule="TVar" customModuleProvider="target">
                                                             <rect key="frame" x="10" y="10" width="45" height="45"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="45" id="Y3r-0i-YNF"/>
@@ -207,6 +207,15 @@
                             <constraint firstItem="4By-ym-uqZ" firstAttribute="leading" secondItem="CxD-Dq-GSX" secondAttribute="leading" id="yI5-jb-lhC"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="captureImage" destination="mak-HX-9Pu" id="T6j-yc-4HD"/>
+                        <outlet property="commentTable" destination="PMS-Rc-SVv" id="fJV-dv-g2C"/>
+                        <outlet property="playButton" destination="XWV-Fl-Azi" id="7XM-Ib-UkL"/>
+                        <outlet property="programTitle" destination="OcV-Zw-Mds" id="9C9-xc-fA3"/>
+                        <outlet property="userImage" destination="IyY-AO-XbF" id="ijm-p0-uJ0"/>
+                        <outlet property="userName" destination="5k4-76-pWN" id="LXU-C5-x5w"/>
+                        <outlet property="videoView" destination="dfK-4F-pGU" id="XH8-vN-zxW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vky-Qv-skQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
