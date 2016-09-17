@@ -18,13 +18,13 @@ class VideoViewController: UIViewController {
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var programTitle: UILabel!
     @IBOutlet weak var userImage: CustomImageView!
+    @IBOutlet weak var viewCount: UILabel!
 
     var video: Video!
     private var moviePlayer: MPMoviePlayerController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        captureImage.setImageFromURL(video.imgUrl)
         setPlayer()
         setDesign()
         setData()
@@ -54,6 +54,7 @@ class VideoViewController: UIViewController {
         userName.text = video.author.fullName
         userImage.setImageFromURL(video.author.imgUrl)
         programTitle.text = video.title
+        viewCount.text = "\(video.viewCount)"
     }
     
     func setDesign() {
