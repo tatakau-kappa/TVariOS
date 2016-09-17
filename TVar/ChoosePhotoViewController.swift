@@ -15,7 +15,7 @@ class ChoosePhotoViewController: UIViewController, UIImagePickerControllerDelega
     @IBOutlet weak var chooseBox: UIView!
     @IBOutlet weak var selectImage: UIImageView!
     @IBOutlet weak var deleteButton: UIButton!
-    @IBOutlet weak var doneButton: UIButton!
+    @IBOutlet weak var doneButton: UIBarButtonItem!
     
     var selectedImage = ""
     var selectFlag = false

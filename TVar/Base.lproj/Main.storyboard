@@ -230,7 +230,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="アルバムから選択" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZMM-pt-NJc">
                                                 <rect key="frame" x="412" y="93.5" width="136" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="0.62352941179999999" green="0.65490196079999996" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.39607843139999999" green="0.46274509800000002" blue="0.51372549020000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U9w-Jn-o05">
@@ -325,21 +325,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="RE3-eJ-5Zp">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="Jbv-KO-31K">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="y8c-Hw-HRK">
-                                <rect key="frame" x="447" y="7" width="133" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="完了"/>
-                                <connections>
-                                    <action selector="doneButtonPushed:" destination="gSy-mc-Sna" eventType="touchUpInside" id="LnT-qz-8m7"/>
-                                </connections>
-                            </button>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="done" id="Jbv-KO-31K">
+                            <connections>
+                                <action selector="doneButtonPushed:" destination="gSy-mc-Sna" id="EGE-QY-8xF"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="chooseBox" destination="HA2-Rx-G4X" id="nha-xM-PaV"/>
                         <outlet property="deleteButton" destination="vZM-TA-Sl4" id="YFR-dL-Rsg"/>
-                        <outlet property="doneButton" destination="y8c-Hw-HRK" id="RYt-ru-0fE"/>
+                        <outlet property="doneButton" destination="Jbv-KO-31K" id="2Ms-Sh-qzt"/>
                         <outlet property="photoFlag" destination="fVl-ah-yAb" id="Bv1-z6-e4U"/>
                         <outlet property="selectImage" destination="jGn-G7-yPi" id="13x-XU-MqN"/>
                         <outlet property="videoImage" destination="7rr-NM-PE6" id="WoE-1f-QDk"/>
