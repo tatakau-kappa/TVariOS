@@ -30,6 +30,7 @@ public class Video:Mappable{
     
     public func mapping(map: Map) {
         id <- map["id"]
+        title <- map["program_name"]
         author <- map["user"]
         imgUrl <- map["resource.thumbnail"]
         videoUrl <- map["resource.swapped"]

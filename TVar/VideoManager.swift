@@ -30,7 +30,6 @@ class VideoManager{
     
     func loadFeed(page: Int){
         let req  = APIRouter.GetHomeFeed
-        
         Alamofire.request(req).validate().responseArray{
             (response: Response<[Video], NSError>) in
             if response.result.error == nil {

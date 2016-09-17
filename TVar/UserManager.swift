@@ -42,7 +42,6 @@ class UserManager{
         let ud = NSUserDefaults.standardUserDefaults()
         let json = Mapper().toJSONString(user, prettyPrint: true)
         ud.setObject(json, forKey: "loginUser")
-        print(user)
         self.currentUser <- user
         APIRouter.token = self.currentUser.value!.authenticationToken
     }

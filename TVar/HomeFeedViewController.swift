@@ -55,7 +55,8 @@ class HomeFeedViewController: UIViewController, UITableViewDelegate, UITableView
     
     // MARK: Data Logic
     func loadFeed(){
-        ManagerLocator.sharedInstance.videoManager.loadMockFeed(page)
+//        ManagerLocator.sharedInstance.videoManager.loadMockFeed(page)
+        ManagerLocator.sharedInstance.videoManager.loadFeed(page)
     }
     
     func pullToRefresh(){
@@ -86,12 +87,12 @@ class HomeFeedViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     
-    func setTitleLogo(){
+//    func setTitleLogo(){
 //        let titleLogo = UIImageView(frame: CGRectMake(0,0,25,25))
 //        titleLogo.contentMode = .ScaleAspectFit
 //        titleLogo.image = UIImage(named: "ic_nav_logo")
 //        navigationItem.titleView = titleLogo
-    }
+//    }
 
     // MARK: Transition logic
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
