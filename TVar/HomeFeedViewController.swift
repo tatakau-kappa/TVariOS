@@ -42,9 +42,9 @@ class HomeFeedViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell:VideoViewCell = tableView.dequeueReusableCellWithIdentifier(NSStringFromClass(VideoViewCell), forIndexPath: indexPath) as! VideoViewCell
         cell.cellData = homeFeed[indexPath.row]
-        if (homeFeed.count - 1) == indexPath.row {
-            loadFeed()
-        }
+//        if (homeFeed.count - 1) == indexPath.row {
+//            loadFeed()
+//        }
         return cell
     }
     

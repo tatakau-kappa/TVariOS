@@ -11,7 +11,7 @@ import RealmSwift
 import ObjectMapper
 
 public class Video:Mappable{
-    dynamic var id = ""
+    dynamic var videoId = 103
     public dynamic var title = "素敵な番組"
     public dynamic var imgUrl = "https://prog-8.com/assets/landing/firstview-4877280ff41348d0481c044493e01c54.png"
     public dynamic var videoUrl = "https://d2nfxe3r64iwve.cloudfront.net/test/battlehack-video.mp4"
@@ -29,7 +29,7 @@ public class Video:Mappable{
     }
     
     public func mapping(map: Map) {
-        id <- map["id"]
+        videoId <- map["id"]
         title <- map["program_name"]
         author <- map["user"]
         imgUrl <- map["resource.thumbnail"]

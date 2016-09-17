@@ -42,7 +42,7 @@ class VideoViewCell: UITableViewCell {
         programTitle.text = video.title
         userImage.setImageFromURL(video.author.imgUrl)
         userName.text = video.author.fullName
-        commentCount.text = "\(video.commentsCount)"
+        commentCount.text = "\(video.comments.count)"
     }
     
 }

@@ -36,7 +36,8 @@ class VideoViewController: UIViewController {
     
     // MARK: For player
     func setPlayer(){
-        self.moviePlayer = MPMoviePlayerController(contentURL: NSURL(string:video.videoUrl))
+        let urlString = "https://d2nfxe3r64iwve.cloudfront.net/\(video.videoId)/video.mp4"
+        self.moviePlayer = MPMoviePlayerController(contentURL: NSURL(string: urlString))
         self.moviePlayer.view.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: videoView.frame.height)
         self.videoView.addSubview(moviePlayer.view)
         

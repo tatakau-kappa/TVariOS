@@ -373,13 +373,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4By-ym-uqZ" userLabel="container">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LTo-Ta-CSF">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                    </imageView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PMS-Rc-SVv" userLabel="CommentTable">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <view key="tableFooterView" contentMode="scaleToFill" id="kj6-al-j8C" userLabel="Header">
-                                            <rect key="frame" x="0.0" y="64" width="600" height="320"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="320"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dfK-4F-pGU" userLabel="Video">
@@ -470,7 +473,11 @@
                                     <constraint firstItem="PMS-Rc-SVv" firstAttribute="top" secondItem="4By-ym-uqZ" secondAttribute="top" id="3as-WN-q9X"/>
                                     <constraint firstItem="PMS-Rc-SVv" firstAttribute="leading" secondItem="4By-ym-uqZ" secondAttribute="leading" id="DmW-p2-IMx"/>
                                     <constraint firstAttribute="bottom" secondItem="PMS-Rc-SVv" secondAttribute="bottom" id="E2g-83-8U8"/>
+                                    <constraint firstAttribute="bottom" secondItem="LTo-Ta-CSF" secondAttribute="bottom" id="IYb-94-ido"/>
+                                    <constraint firstAttribute="trailing" secondItem="LTo-Ta-CSF" secondAttribute="trailing" id="KdR-0J-XI5"/>
+                                    <constraint firstItem="LTo-Ta-CSF" firstAttribute="top" secondItem="4By-ym-uqZ" secondAttribute="top" id="UlO-6u-fnr"/>
                                     <constraint firstAttribute="trailing" secondItem="PMS-Rc-SVv" secondAttribute="trailing" id="nWJ-7R-Pzp"/>
+                                    <constraint firstItem="LTo-Ta-CSF" firstAttribute="leading" secondItem="4By-ym-uqZ" secondAttribute="leading" id="vwr-YH-QQ4"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -478,7 +485,7 @@
                         <constraints>
                             <constraint firstItem="jTr-xC-cfN" firstAttribute="top" secondItem="4By-ym-uqZ" secondAttribute="bottom" id="1J7-s3-W0Y"/>
                             <constraint firstAttribute="trailing" secondItem="4By-ym-uqZ" secondAttribute="trailing" id="Jb3-wh-Wg2"/>
-                            <constraint firstItem="4By-ym-uqZ" firstAttribute="top" secondItem="CxD-Dq-GSX" secondAttribute="top" id="wJM-Fk-VKZ"/>
+                            <constraint firstItem="4By-ym-uqZ" firstAttribute="top" secondItem="M9I-2p-DfR" secondAttribute="bottom" id="ctM-o8-dXq"/>
                             <constraint firstItem="4By-ym-uqZ" firstAttribute="leading" secondItem="CxD-Dq-GSX" secondAttribute="leading" id="yI5-jb-lhC"/>
                         </constraints>
                     </view>
