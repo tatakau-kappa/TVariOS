@@ -53,7 +53,7 @@ enum APIRouter: URLRequestConvertible {
         mutableURLRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
         mutableURLRequest.setValue("application/json", forHTTPHeaderField: "Accept")
         if let auth = APIRouter.token{
-            mutableURLRequest.setValue(auth, forHTTPHeaderField: "X-User-Token")
+            mutableURLRequest.setValue(auth, forHTTPHeaderField: "Authorization")
         }
         mutableURLRequest.setValue("application/json", forHTTPHeaderField: "Accept")
         

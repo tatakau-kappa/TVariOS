@@ -25,7 +25,6 @@ class UserManager{
         Alamofire.request(req).validate().responseObject{
             (response: Response<User, NSError>) in
             if response.result.error == nil {
-                print(response.result.value!.fullName)
                 self.saveLoginUser(response.result.value!)
             } else{
                 print(response.result.error)
@@ -43,9 +42,10 @@ class UserManager{
         let ud = NSUserDefaults.standardUserDefaults()
         let json = Mapper().toJSONString(user, prettyPrint: true)
         ud.setObject(json, forKey: "loginUser")
+        print(user)
         self.currentUser <- user
-//        APIRouter.token = self.currentUser.value!.authenticationToken
-//        VideoRouter.token = self.currentUser.value!.authenticationToken
+        APIRouter.token = self.currentUser.value!.authenticationToken
+        print(APIRouter.token)
     }
     
     
