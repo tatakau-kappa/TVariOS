@@ -21,16 +21,17 @@ class UserManager{
     var paymentToken: String = ""
     
     func loginFacebook(authData: [String:String]){
-//        let req = APIRouter.FacebookLogin(authData)
-//        print(authData)
-//        Alamofire.request(req).validate().responseObject{
-//            (response: Response<User, NSError>) in
-//            if response.result.error == nil {
-//                self.saveLoginUser(response.result.value!)
-//            } else{
-//                self.lastError = response.result.error
-//            }
-//        }
+        let req = APIRouter.FacebookLogin(authData)
+        Alamofire.request(req).validate().responseObject{
+            (response: Response<User, NSError>) in
+            if response.result.error == nil {
+                print(response.result.value!.fullName)
+                self.saveLoginUser(response.result.value!)
+            } else{
+                print(response.result.error)
+                self.lastError = response.result.error
+            }
+        }
     }
     
     func loginMock(){

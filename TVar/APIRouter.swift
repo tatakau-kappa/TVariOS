@@ -12,7 +12,7 @@ import Alamofire
 
 enum APIRouter: URLRequestConvertible {
     
-    static let baseURL = "https://veat-api.herokuapp.com"
+    static let baseURL = "https://tvar.claudetech.com"
     static var token: String?
     
     case FacebookLogin([String:String])
@@ -36,7 +36,7 @@ enum APIRouter: URLRequestConvertible {
     var path: String{
         switch self {
         case .FacebookLogin:
-            return "/authenticate/facebook"
+            return "/login"
         case .GetHomeFeed:
             return "/videos"
         case .LoadHomeFeed:
