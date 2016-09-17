@@ -26,6 +26,8 @@
 		FA9F3AEC1D8D13480032FFD4 /* VideoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9F3AEA1D8D13480032FFD4 /* VideoViewCell.swift */; };
 		FA9F3AED1D8D13480032FFD4 /* VideoViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA9F3AEB1D8D13480032FFD4 /* VideoViewCell.xib */; };
 		FA9F3AEF1D8D15160032FFD4 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9F3AEE1D8D15160032FFD4 /* VideoViewController.swift */; };
+		FA9F3AF11D8D4C770032FFD4 /* RecordVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9F3AF01D8D4C770032FFD4 /* RecordVideoViewController.swift */; };
+		FA9F3AF31D8D4D930032FFD4 /* CameraManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9F3AF21D8D4D930032FFD4 /* CameraManager.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		FA9F3AEA1D8D13480032FFD4 /* VideoViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewCell.swift; sourceTree = "<group>"; };
 		FA9F3AEB1D8D13480032FFD4 /* VideoViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoViewCell.xib; sourceTree = "<group>"; };
 		FA9F3AEE1D8D15160032FFD4 /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		FA9F3AF01D8D4C770032FFD4 /* RecordVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordVideoViewController.swift; sourceTree = "<group>"; };
+		FA9F3AF21D8D4D930032FFD4 /* CameraManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CameraManager.framework; path = "../../../Library/Developer/Xcode/DerivedData/TVar-cewhewrqvmldaxftbqqjpfuhoznw/Build/Products/Debug-iphonesimulator/CameraManager.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA9F3AF31D8D4D930032FFD4 /* CameraManager.framework in Frameworks */,
 				46BCF70F7295D6AB92597E64 /* Pods_TVar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -104,6 +109,7 @@
 		4FF5BE578C525433F1F9E492 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA9F3AF21D8D4D930032FFD4 /* CameraManager.framework */,
 				D6758D3A5EDC989434790F72 /* Pods_TVar.framework */,
 			);
 			name = Frameworks;
@@ -189,6 +195,7 @@
 				FA9F3AD11D8CE9CA0032FFD4 /* LoginViewController.swift */,
 				FA9F3AE71D8D05DE0032FFD4 /* HomeFeedViewController.swift */,
 				FA9F3AEE1D8D15160032FFD4 /* VideoViewController.swift */,
+				FA9F3AF01D8D4C770032FFD4 /* RecordVideoViewController.swift */,
 				FA9F3AE91D8D132B0032FFD4 /* Cell */,
 			);
 			name = ViewController;
@@ -406,6 +413,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA9F3ADB1D8CFE810032FFD4 /* UserManager.swift in Sources */,
+				FA9F3AF11D8D4C770032FFD4 /* RecordVideoViewController.swift in Sources */,
 				FA9F3AE41D8D03C50032FFD4 /* APIRouter.swift in Sources */,
 				FA9F3AEF1D8D15160032FFD4 /* VideoViewController.swift in Sources */,
 				FA9F3AE21D8D039C0032FFD4 /* CustomImageView.swift in Sources */,

@@ -5,7 +5,6 @@ use_frameworks!
 
 target 'TVar' do
   pod 'FBSDKLoginKit'
-  pod 'CollectionViewWaterfallLayout'
   pod 'HanekeSwift'
   pod 'VideoSplash'
   pod 'Observable-Swift'
@@ -13,9 +12,8 @@ target 'TVar' do
   pod 'Alamofire'
   pod 'AlamofireObjectMapper'
   pod 'ObjectMapper'
+  pod 'CameraManager', '~> 2.2'
   
-
-  #pod 'CameraManager'
 
 end
 

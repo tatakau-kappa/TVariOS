@@ -65,19 +65,27 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Mvk-7i-XC0">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bRA-Yg-wl1">
-                                    <rect key="frame" x="0.0" y="64" width="600" height="44"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="Button"/>
-                                </button>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bRA-Yg-wl1">
+                                <rect key="frame" x="260" y="490" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="cWW-K8-FMn"/>
+                                    <constraint firstAttribute="height" constant="80" id="o5l-Jd-d0x"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="btn_home"/>
+                                <connections>
+                                    <segue destination="Kfp-vk-h7R" kind="presentation" id="mGT-fy-20T"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.078431372549019607" green="0.10588235294117647" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Mvk-7i-XC0" firstAttribute="top" secondItem="dAI-R6-KHa" secondAttribute="top" id="29A-35-McT"/>
                             <constraint firstItem="be9-xC-jfy" firstAttribute="top" secondItem="Mvk-7i-XC0" secondAttribute="bottom" id="2zS-xj-UKj"/>
+                            <constraint firstItem="bRA-Yg-wl1" firstAttribute="centerX" secondItem="dAI-R6-KHa" secondAttribute="centerX" id="VSb-F6-qfg"/>
                             <constraint firstAttribute="trailing" secondItem="Mvk-7i-XC0" secondAttribute="trailing" id="tNd-lQ-zXK"/>
                             <constraint firstItem="Mvk-7i-XC0" firstAttribute="leading" secondItem="dAI-R6-KHa" secondAttribute="leading" id="uwZ-YV-8XA"/>
+                            <constraint firstItem="be9-xC-jfy" firstAttribute="top" secondItem="bRA-Yg-wl1" secondAttribute="bottom" constant="30" id="v4A-u8-Jen"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cCC-r6-iXC"/>
@@ -90,10 +98,10 @@
             </objects>
             <point key="canvasLocation" x="1647" y="335"/>
         </scene>
-        <!--View Controller-->
+        <!--Record Video View Controller-->
         <scene sceneID="Fgh-di-sQp">
             <objects>
-                <viewController id="VGO-dD-ar9" sceneMemberID="viewController">
+                <viewController id="VGO-dD-ar9" customClass="RecordVideoViewController" customModule="TVar" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rfQ-Lp-7WM"/>
                         <viewControllerLayoutGuide type="bottom" id="qcX-hR-22b"/>
@@ -101,12 +109,75 @@
                     <view key="view" contentMode="scaleToFill" id="29Y-Du-pfo">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hQL-B4-eIG" userLabel="WholeView">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mb0-8S-AV1" userLabel="RecordButton">
+                                <rect key="frame" x="260" y="490" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="b84-Wp-Y6C"/>
+                                    <constraint firstAttribute="width" constant="80" id="iEC-1s-MRQ"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="btn_record"/>
+                                <connections>
+                                    <action selector="recordButtonPushed:" destination="VGO-dD-ar9" eventType="touchUpInside" id="gCv-pp-hep"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0JZ-pK-DeQ" userLabel="CloseButton">
+                                <rect key="frame" x="30" y="94" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="2tz-tl-52G"/>
+                                    <constraint firstAttribute="width" constant="50" id="z6P-iK-VFw"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="ic_close"/>
+                                <connections>
+                                    <action selector="closeButtonPushed:" destination="VGO-dD-ar9" eventType="touchUpInside" id="Dvh-Ey-L4S"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qcX-hR-22b" firstAttribute="top" secondItem="Mb0-8S-AV1" secondAttribute="bottom" constant="30" id="Bth-q5-pOD"/>
+                            <constraint firstItem="qcX-hR-22b" firstAttribute="top" secondItem="hQL-B4-eIG" secondAttribute="bottom" id="Ogu-dJ-d0X"/>
+                            <constraint firstItem="hQL-B4-eIG" firstAttribute="top" secondItem="rfQ-Lp-7WM" secondAttribute="bottom" id="RhY-0J-4pg"/>
+                            <constraint firstItem="0JZ-pK-DeQ" firstAttribute="leading" secondItem="29Y-Du-pfo" secondAttribute="leading" constant="30" id="WZe-dD-jQ1"/>
+                            <constraint firstItem="Mb0-8S-AV1" firstAttribute="centerX" secondItem="29Y-Du-pfo" secondAttribute="centerX" id="bao-lu-uXx"/>
+                            <constraint firstItem="hQL-B4-eIG" firstAttribute="leading" secondItem="29Y-Du-pfo" secondAttribute="leading" id="eSf-te-ArI"/>
+                            <constraint firstAttribute="trailing" secondItem="hQL-B4-eIG" secondAttribute="trailing" id="m5P-xa-t0M"/>
+                            <constraint firstItem="0JZ-pK-DeQ" firstAttribute="top" secondItem="rfQ-Lp-7WM" secondAttribute="bottom" constant="30" id="zCp-Uc-A0M"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="0da-dL-QNw"/>
+                    <connections>
+                        <outlet property="closeButton" destination="0JZ-pK-DeQ" id="iww-gE-N27"/>
+                        <outlet property="recordButton" destination="Mb0-8S-AV1" id="FoK-5W-wIR"/>
+                        <outlet property="wholeView" destination="hQL-B4-eIG" id="InP-6Y-npX"/>
+                        <segue destination="gSy-mc-Sna" kind="show" identifier="finishRecord" id="GBE-c4-zRj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YZh-eM-do3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1647" y="1096"/>
+            <point key="canvasLocation" x="2459" y="1096"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hxi-5A-AVa">
+            <objects>
+                <viewController id="gSy-mc-Sna" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Phl-Ba-G3g"/>
+                        <viewControllerLayoutGuide type="bottom" id="bpz-ae-3DD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ATM-md-ENV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lq6-co-etT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3196" y="1096"/>
         </scene>
         <!--Video View Controller-->
         <scene sceneID="SP9-Es-amt">
@@ -242,7 +313,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vky-Qv-skQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2307" y="336"/>
+            <point key="canvasLocation" x="2459" y="335"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9Db-n7-m00">
@@ -262,8 +333,29 @@
             </objects>
             <point key="canvasLocation" x="835" y="335"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YGV-oX-Ifh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Kfp-vk-h7R" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eyf-Gb-vgf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="VGO-dD-ar9" kind="relationship" relationship="rootViewController" id="LeY-zg-wqa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0BD-rq-mn1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1647" y="1096"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="btn_home" width="124" height="121"/>
         <image name="btn_play" width="121" height="121"/>
+        <image name="btn_record" width="141" height="138"/>
+        <image name="ic_close" width="58" height="58"/>
     </resources>
 </document>

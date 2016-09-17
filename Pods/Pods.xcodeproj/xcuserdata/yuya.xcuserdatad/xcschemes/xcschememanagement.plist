@@ -19,7 +19,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>CollectionViewWaterfallLayout.xcscheme</key>
+		<key>CameraManager.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -72,17 +72,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>050333268C8EBD7971172E2CBDFB745E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>0595B31B82B439258B90E4507BAD6C83</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>2064DEC6A53E81DEE63D3D6BB497698B</key>
+		<key>1B211B0CC762A6AD67AEBF07B06372C6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -97,12 +87,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>4FEFFF8BCFFF25082AF4A867552C5F52</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>5D69761C2CD2A1E5C013537B29CAB4CF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>629C18E145D542439FA1188AB7E59D2E</key>
+		<key>5E9D4DC2E06704377EC641BEFBA8CCBB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -117,12 +112,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>9696AA31CD6097E7D8079F62E07219A6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>9D0F2E5EA1B46A5D72FFD42B0B39DBBC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C0AC860679ED30A27760533BA0849843</key>
+		<key>B2EB479A5355AACE774001E418FF6070</key>
 		<dict>
 			<key>primary</key>
 			<true/>
