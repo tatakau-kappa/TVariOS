@@ -14,8 +14,7 @@ public class Video:Mappable{
     dynamic var id = ""
     public dynamic var title = "素敵な番組"
     public dynamic var imgUrl = "https://prog-8.com/assets/landing/firstview-4877280ff41348d0481c044493e01c54.png"
-//    public dynamic var videoUrl = "https://l.facebook.com/l.php?u=https%3A%2F%2Fd2nfxe3r64iwve.cloudfront.net%2Ftest%2Fbattlehack-video.mp4&h=wAQFDr85b"
-    public dynamic var videoUrl = "https://dl.dropboxusercontent.com/u/14222148/music-test.mp4"
+    public dynamic var videoUrl = "https://d2nfxe3r64iwve.cloudfront.net/test/battlehack-video.mp4"
     public var author = User()
     dynamic var commentsCount = 90
 //    dynamic var commented = false
