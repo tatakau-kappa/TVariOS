@@ -458,10 +458,10 @@
             </objects>
             <point key="canvasLocation" x="2459" y="335"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Universe Navigation Controller-->
         <scene sceneID="9Db-n7-m00">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xsg-CD-krR" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xsg-CD-krR" customClass="UniverseNavigationController" customModule="TVar" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hgg-la-ZEO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -476,10 +476,10 @@
             </objects>
             <point key="canvasLocation" x="835" y="335"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Universe Navigation Controller-->
         <scene sceneID="YGV-oX-Ifh">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Kfp-vk-h7R" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Kfp-vk-h7R" customClass="UniverseNavigationController" customModule="TVar" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eyf-Gb-vgf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

@@ -21,6 +21,7 @@ class HomeFeedViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewDidLoad()
         setRefresh()
         setTable()
+        setTitleLogo()
         loadFeed()
     }
 
@@ -87,12 +88,12 @@ class HomeFeedViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     
-//    func setTitleLogo(){
-//        let titleLogo = UIImageView(frame: CGRectMake(0,0,25,25))
-//        titleLogo.contentMode = .ScaleAspectFit
-//        titleLogo.image = UIImage(named: "ic_nav_logo")
-//        navigationItem.titleView = titleLogo
-//    }
+    func setTitleLogo(){
+        let titleLogo = UIImageView(frame: CGRectMake(0,0,25,25))
+        titleLogo.contentMode = .ScaleAspectFit
+        titleLogo.image = UIImage(named: "ic_nav_logo")
+        navigationItem.titleView = titleLogo
+    }
 
     // MARK: Transition logic
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
