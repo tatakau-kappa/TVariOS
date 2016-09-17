@@ -17,28 +17,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginBack" translatesAutoresizingMaskIntoConstraints="NO" id="zCO-75-ZpZ">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="us7-Lu-96A" customClass="FBSDKLoginButton">
-                                <rect key="frame" x="20" y="460" width="560" height="60"/>
+                                <rect key="frame" x="20" y="495" width="560" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="6Er-r1-0HY"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vRx-Rl-Sn6">
-                                <rect key="frame" x="256" y="285" width="88" height="30"/>
-                                <state key="normal" title="Mock Button"/>
-                                <connections>
-                                    <action selector="mockButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zBD-CZ-inZ"/>
-                                </connections>
-                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Yh8-bP-3uz">
+                                <rect key="frame" x="245" y="130" width="110" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="5gw-JY-Sce"/>
+                                    <constraint firstAttribute="height" constant="90" id="Wiw-kX-AZZ"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginText" translatesAutoresizingMaskIntoConstraints="NO" id="hsG-kq-qx1">
+                                <rect key="frame" x="25" y="285" width="550" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="9Uv-g1-Bjx"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Yh8-bP-3uz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8Rh-pk-1RF"/>
+                            <constraint firstItem="Yh8-bP-3uz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="110" id="9St-m0-PX4"/>
+                            <constraint firstAttribute="trailing" secondItem="hsG-kq-qx1" secondAttribute="trailing" constant="25" id="BT9-Aq-BrD"/>
                             <constraint firstAttribute="trailing" secondItem="us7-Lu-96A" secondAttribute="trailing" constant="20" id="Fqo-Pp-r4G"/>
-                            <constraint firstItem="vRx-Rl-Sn6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="IRF-K2-gdr"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="us7-Lu-96A" secondAttribute="bottom" constant="80" id="MQg-XM-lve"/>
-                            <constraint firstItem="vRx-Rl-Sn6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Oeo-IB-PgC"/>
+                            <constraint firstItem="zCO-75-ZpZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="GzK-t0-hi1"/>
+                            <constraint firstAttribute="trailing" secondItem="zCO-75-ZpZ" secondAttribute="trailing" id="KNp-Ui-IoT"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="us7-Lu-96A" secondAttribute="bottom" constant="45" id="MQg-XM-lve"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zCO-75-ZpZ" secondAttribute="bottom" id="TMg-ha-uc2"/>
+                            <constraint firstItem="us7-Lu-96A" firstAttribute="top" secondItem="hsG-kq-qx1" secondAttribute="bottom" constant="60" id="UyO-mM-5U7"/>
+                            <constraint firstItem="hsG-kq-qx1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="25" id="Vcr-bc-p9q"/>
                             <constraint firstItem="us7-Lu-96A" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="bnM-LL-7aX"/>
+                            <constraint firstItem="zCO-75-ZpZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cW1-xS-cMc"/>
                         </constraints>
                     </view>
                     <connections>
@@ -528,5 +544,7 @@
         <image name="ic_plus" width="50" height="50"/>
         <image name="ic_video" width="105" height="105"/>
         <image name="loginBack" width="750" height="1334"/>
+        <image name="loginText" width="623" height="278"/>
+        <image name="logo" width="229" height="197"/>
     </resources>
 </document>

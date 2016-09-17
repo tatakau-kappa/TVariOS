@@ -47,11 +47,5 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate  {
     func loginButtonDidLogOut(loginButton: FBSDKLoginButton!){
         print("User logged out...")
     }
-    
-    @IBAction func mockButton(sender: AnyObject) {
-        ManagerLocator.sharedInstance.userManager.loginMock()
-        self.performSegueWithIdentifier("loginSucceeded", sender: self)
-    }
-    
 
 }
