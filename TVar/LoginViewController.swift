@@ -27,15 +27,17 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate  {
     
     //delegate
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!){
-        print("aaa")
         if error == nil{
             let token = FBSDKAccessToken.currentAccessToken()
             let authData = ["id":token.userID as String, "accessToken":token.tokenString as String ,
                             "provider": "facebook" as String]
-            //ここでも失敗の分岐
-//            ManagerLocator.sharedInstance.userManager.loginFacebook(authData)
             print(authData)
-            self.performSegueWithIdentifier("loginSucceeded", sender: self)
+            let loginManager = FBSDKLoginManager()
+            loginManager.logOut()
+//            ManagerLocator.sharedInstance.userManager.loginFacebook(authData)
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(0.8 * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), { () -> Void in
+                self.performSegueWithIdentifier("loginSucceeded", sender: self)
+            })
         } else {
             // TODO: 失敗のモーダル表示
             print(error.localizedDescription)

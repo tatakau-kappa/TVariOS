@@ -34,7 +34,7 @@
                     </view>
                     <connections>
                         <outlet property="fbLoginButton" destination="us7-Lu-96A" id="aUK-aI-CDC"/>
-                        <segue destination="IqN-kL-V2N" kind="show" identifier="loginSucceeded" id="Y0t-rl-pvA"/>
+                        <segue destination="IqN-kL-V2N" kind="show" identifier="loginSucceeded" id="Bqs-i6-E1n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
