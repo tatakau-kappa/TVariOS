@@ -176,7 +176,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bl6-Sb-TGe" userLabel="VideoBox">
                                 <rect key="frame" x="0.0" y="79" width="600" height="215.5"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7rr-NM-PE6" userLabel="SelectVideoView">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="loginBack" translatesAutoresizingMaskIntoConstraints="NO" id="7rr-NM-PE6" userLabel="SelectVideoView">
                                         <rect key="frame" x="15" y="51" width="570" height="159.5"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STEP1 - 撮影したテレビ動画" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWg-Ra-liE">
@@ -239,6 +239,9 @@
                                                     <constraint firstAttribute="width" constant="60" id="xrm-Hh-wYK"/>
                                                 </constraints>
                                                 <state key="normal" title="Button" image="ic_video"/>
+                                                <connections>
+                                                    <action selector="cameraButtonPushed:" destination="gSy-mc-Sna" eventType="touchUpInside" id="TKG-AZ-TrQ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vxg-MQ-3Fg">
                                                 <rect key="frame" x="450" y="18.5" width="60" height="60"/>
@@ -247,6 +250,9 @@
                                                     <constraint firstAttribute="width" constant="60" id="D6f-6e-wR3"/>
                                                 </constraints>
                                                 <state key="normal" title="Button" image="ic_album"/>
+                                                <connections>
+                                                    <action selector="albumButtonPushed:" destination="gSy-mc-Sna" eventType="touchUpInside" id="FYs-P8-SKn"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="撮影する" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qw6-lX-XtG">
                                                 <rect key="frame" x="66" y="88.5" width="68" height="21"/>
@@ -304,6 +310,12 @@
                             <constraint firstItem="bpz-ae-3DD" firstAttribute="top" secondItem="k0d-Fq-9Qi" secondAttribute="bottom" constant="10" id="hVh-Yn-Pd1"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="chooseBox" destination="HA2-Rx-G4X" id="nha-xM-PaV"/>
+                        <outlet property="photoFlag" destination="fVl-ah-yAb" id="Bv1-z6-e4U"/>
+                        <outlet property="selectImage" destination="jGn-G7-yPi" id="13x-XU-MqN"/>
+                        <outlet property="videoImage" destination="7rr-NM-PE6" id="WoE-1f-QDk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lq6-co-etT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -491,5 +503,6 @@
         <image name="ic_done" width="23" height="23"/>
         <image name="ic_plus" width="50" height="50"/>
         <image name="ic_video" width="105" height="105"/>
+        <image name="loginBack" width="750" height="1334"/>
     </resources>
 </document>
