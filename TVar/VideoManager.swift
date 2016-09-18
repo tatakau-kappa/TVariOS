@@ -89,7 +89,7 @@ class VideoManager{
         if uploadedVideo.value != "" && uploadedImage.value != "" {
             let videoData = ["video_uid": uploadedVideo.value as String,
                             "image_uid": uploadedImage.value as String,
-                            "program_name": "番組名だよー"]
+                            "program_name": "あの番組"]
             let req = APIRouter.FinishVideo(videoData)
             Alamofire.request(req).validate().responseObject{
                 (response: Response<User, NSError>) in

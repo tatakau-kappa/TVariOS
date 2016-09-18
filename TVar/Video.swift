@@ -11,9 +11,9 @@ import RealmSwift
 import ObjectMapper
 
 public class Video:Mappable{
-    dynamic var videoId = 103
+    dynamic var videoId = 1
     public dynamic var title = "素敵な番組"
-    public dynamic var imgUrl = "https://prog-8.com/assets/landing/firstview-4877280ff41348d0481c044493e01c54.png"
+    public dynamic var imgUrl = "https://images.buildyapp.com/app_owner-2/no_image-r6rEBhU.png"
     public dynamic var videoUrl = "https://d2nfxe3r64iwve.cloudfront.net/test/battlehack-video.mp4"
     public var author = User()
     dynamic var commentsCount = 90

@@ -25,6 +25,7 @@ class VideoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(video)
         setPlayer()
         setDesign()
         setData()
@@ -32,6 +33,10 @@ class VideoViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        self.moviePlayer.stop()
     }
     
     // MARK: For player
