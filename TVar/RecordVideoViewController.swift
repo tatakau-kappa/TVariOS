@@ -27,6 +27,11 @@ class RecordVideoViewController: UIViewController, UINavigationControllerDelegat
         wholeView.frame = view.bounds
         setupRecord()
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        setupRecord()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -34,6 +39,10 @@ class RecordVideoViewController: UIViewController, UINavigationControllerDelegat
     
     // MARK: Setup record button
     func setupRecord(){
+        isRecording = false
+        closeButton.hidden = false
+        let image = UIImage(named: "btn_record")
+        recordButton.setImage(image, forState: .Normal)
         self.cameraManager = CameraManager()
         cameraManager.cameraDevice = .Back
         cameraManager.cameraOutputMode = .VideoWithMic

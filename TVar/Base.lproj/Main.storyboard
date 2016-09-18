@@ -143,7 +143,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0JZ-pK-DeQ" userLabel="CloseButton">
-                                <rect key="frame" x="30" y="94" width="50" height="50"/>
+                                <rect key="frame" x="520" y="94" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="2tz-tl-52G"/>
                                     <constraint firstAttribute="width" constant="50" id="z6P-iK-VFw"/>
@@ -159,9 +159,9 @@
                             <constraint firstItem="qcX-hR-22b" firstAttribute="top" secondItem="Mb0-8S-AV1" secondAttribute="bottom" constant="30" id="Bth-q5-pOD"/>
                             <constraint firstItem="qcX-hR-22b" firstAttribute="top" secondItem="hQL-B4-eIG" secondAttribute="bottom" id="Ogu-dJ-d0X"/>
                             <constraint firstItem="hQL-B4-eIG" firstAttribute="top" secondItem="rfQ-Lp-7WM" secondAttribute="bottom" id="RhY-0J-4pg"/>
-                            <constraint firstItem="0JZ-pK-DeQ" firstAttribute="leading" secondItem="29Y-Du-pfo" secondAttribute="leading" constant="30" id="WZe-dD-jQ1"/>
                             <constraint firstItem="Mb0-8S-AV1" firstAttribute="centerX" secondItem="29Y-Du-pfo" secondAttribute="centerX" id="bao-lu-uXx"/>
                             <constraint firstItem="hQL-B4-eIG" firstAttribute="leading" secondItem="29Y-Du-pfo" secondAttribute="leading" id="eSf-te-ArI"/>
+                            <constraint firstAttribute="trailing" secondItem="0JZ-pK-DeQ" secondAttribute="trailing" constant="30" id="gvl-vA-9Av"/>
                             <constraint firstAttribute="trailing" secondItem="hQL-B4-eIG" secondAttribute="trailing" id="m5P-xa-t0M"/>
                             <constraint firstItem="0JZ-pK-DeQ" firstAttribute="top" secondItem="rfQ-Lp-7WM" secondAttribute="bottom" constant="30" id="zCp-Uc-A0M"/>
                         </constraints>
