@@ -23,9 +23,7 @@ class RecordVideoViewController: UIViewController, UINavigationControllerDelegat
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
         wholeView.frame = view.bounds
-        setupRecord()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -61,8 +59,7 @@ class RecordVideoViewController: UIViewController, UINavigationControllerDelegat
                 PHImageManager.defaultManager().requestAVAssetForVideo(phAsset, options: PHVideoRequestOptions(), resultHandler: { (asset, audioMix, info) -> Void in
                     if let asset = asset as? AVURLAsset {
                         let videoData = NSData(contentsOfURL: asset.URL)
-                        let videoPath = NSTemporaryDirectory() + "tmpMovie.MOV"
-                        let videoSaveURL = NSURL(fileURLWithPath: videoPath)
+                        let videoSaveURL = self.getTempURL()
                         let writeResult = videoData?.writeToURL(videoSaveURL, atomically: true)
                         if let writeResult = writeResult where writeResult {
                             ManagerLocator.sharedInstance.videoManager.uploadVideo(videoSaveURL)
@@ -76,11 +73,17 @@ class RecordVideoViewController: UIViewController, UINavigationControllerDelegat
         })
     }
     
+    func getTempURL() -> NSURL{
+        let videoPath = NSTemporaryDirectory() + "tmpMovie.MOV"
+        let videoSaveURL = NSURL(fileURLWithPath: videoPath)
+        return videoSaveURL
+    }
+    
     // MARK:Transition
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "finishRecord"{
-//            let postVC = segue.destinationViewController as! PostVideoTableViewController
-//            postVC.videoURL = url
+            let ChooseVC = segue.destinationViewController as! ChoosePhotoViewController
+            ChooseVC.videoURL = getTempURL()
         }
     }
     

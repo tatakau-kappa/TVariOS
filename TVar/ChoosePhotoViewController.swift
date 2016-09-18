@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ChoosePhotoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
 
@@ -19,10 +20,15 @@ class ChoosePhotoViewController: UIViewController, UIImagePickerControllerDelega
     
     var selectedImage = ""
     var selectFlag = false
+    var videoURL: NSURL!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(false, animated: false)
+        ManagerLocator.sharedInstance.videoManager.finishVideoFlag.afterChange.add(owner: self) {
+            value in
+            self.videoImage.image = self.thumbnailForVideoAtURL(self.videoURL)
+        }
         ManagerLocator.sharedInstance.videoManager.uploadFlag.afterChange.add(owner: self) {
             value in
             self.dismissViewControllerAnimated(true, completion: nil)
@@ -87,6 +93,25 @@ class ChoosePhotoViewController: UIViewController, UIImagePickerControllerDelega
         chooseBox.layer.borderColor = UIColor.grayColor().CGColor
         selectImage.layer.cornerRadius = 5
     }
+    
+    
+    private func thumbnailForVideoAtURL(url: NSURL) -> UIImage? {
+        
+        let asset = AVAsset(URL: url)
+        let assetImageGenerator = AVAssetImageGenerator(asset: asset)
+        
+        var time = asset.duration
+        time.value = min(time.value, 2)
+        
+        do {
+            let imageRef = try assetImageGenerator.copyCGImageAtTime(time, actualTime: nil)
+            return UIImage(CGImage: imageRef)
+        } catch {
+            print("error")
+            return nil
+        }
+    }
+
     
     // MARK: Button
     @IBAction func cameraButtonPushed(sender: AnyObject) {

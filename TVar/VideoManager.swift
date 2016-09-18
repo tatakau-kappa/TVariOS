@@ -19,6 +19,7 @@ class VideoManager{
     var uploadedVideo: Observable<String> = Observable("")
     var uploadedImage: Observable<String> = Observable("")
     var uploadFlag: Observable<Bool> = Observable(false)
+    var finishVideoFlag: Observable<Bool> = Observable(false)
     var lastError: NSError?
     
     let transferManager = AWSS3TransferManager.defaultS3TransferManager()
@@ -49,6 +50,7 @@ class VideoManager{
     
     
     func uploadVideo(url: NSURL){
+        self.finishVideoFlag <- true
         let uploadRequest = AWSS3TransferManagerUploadRequest()
         uploadRequest.bucket = "tatakau-kappa"
         uploadRequest.key = "raw_videos/\(randomString()).mp4"
@@ -58,7 +60,6 @@ class VideoManager{
         transferManager.upload(uploadRequest).continueWithBlock { (task: AWSTask) -> AnyObject? in
             if task.error == nil && task.exception == nil {
                 self.uploadedVideo <- uploadRequest.key!
-                
             } else {
                 print("fail")
             }

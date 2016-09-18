@@ -193,8 +193,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bl6-Sb-TGe" userLabel="VideoBox">
                                 <rect key="frame" x="0.0" y="79" width="600" height="221"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="loginBack" translatesAutoresizingMaskIntoConstraints="NO" id="7rr-NM-PE6" userLabel="SelectVideoView">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="7rr-NM-PE6" userLabel="SelectVideoView">
                                         <rect key="frame" x="15" y="51" width="570" height="165"/>
+                                        <color key="backgroundColor" red="0.85610512999999999" green="0.95921140140000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STEP1 - 撮影したテレビ動画" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWg-Ra-liE">
                                         <rect key="frame" x="15" y="15" width="231" height="21"/>
