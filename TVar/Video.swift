@@ -12,9 +12,9 @@ import ObjectMapper
 
 public class Video:Mappable{
     dynamic var videoId = 1
-    public dynamic var title = "素敵な番組"
+    public dynamic var title = "あの番組"
     public dynamic var imgUrl = "https://images.buildyapp.com/app_owner-2/no_image-r6rEBhU.png"
-    public dynamic var videoUrl = "https://d2nfxe3r64iwve.cloudfront.net/test/battlehack-video.mp4"
+    public dynamic var videoUrl = ""
     public var author = User()
     dynamic var commentsCount = 90
     dynamic var viewCount = 1000

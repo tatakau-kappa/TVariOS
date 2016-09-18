@@ -40,7 +40,7 @@ class VideoManager{
         Alamofire.request(req).validate().responseArray{
             (response: Response<[Video], NSError>) in
             if response.result.error == nil {
-                self.videoFeed <- response.result.value!
+                self.videoFeed <- response.result.value!.filter{ $0.videoUrl != "" }
             } else{
                 self.lastError = response.result.error
                 print(self.lastError)
