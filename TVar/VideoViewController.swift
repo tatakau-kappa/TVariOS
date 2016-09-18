@@ -62,5 +62,20 @@ class VideoViewController: UIViewController {
         userImage.layer.borderColor = UIColor.whiteColor().CGColor
         userImage.layer.borderWidth = 1.0
     }
+
+    @IBAction func shareButtonClick(sender: AnyObject) {
+        let shareText = "「\(video.title)」に出演しました？！#TVar #tvhackday"
+        let shareWebsite = NSURL(string: video.videoUrl)
+        var shareImage = UIImage(named: "loginBack")
+        if let url = NSURL(string: video.imgUrl) {
+            if let data = NSData(contentsOfURL: url) {
+                shareImage = UIImage(data: data)
+            }        
+        }
+
+        let activityItems = [shareText,shareWebsite!, shareImage!]
+        let activityVC = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
+        self.presentViewController(activityVC, animated: true, completion: nil)
+    }
     
 }
